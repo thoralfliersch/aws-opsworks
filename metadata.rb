@@ -1,0 +1,12 @@
+name    "liersch"
+license "proprietary"
+version "0.0.1"
+
+depends "apache"
+depends "apt"
+depends "build-essential"
+depends "git"
+depends "htop"
+depends "mysql"
+depends "php"
+depends "php-fpm"
