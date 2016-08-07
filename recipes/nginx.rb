@@ -7,6 +7,11 @@ package "nginx" do
     action :upgrade
 end
 
+service 'nginx' do
+    supports :status => true, :restart => true, :reload => true
+    action   :enable
+end
+
 template 'nginx.conf' do
     path     "/etc/nginx/nginx.conf"
     source   "nginx/nginx.conf.erb"
