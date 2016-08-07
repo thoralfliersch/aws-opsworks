@@ -6,8 +6,8 @@
 #end
 
 directory '/var/www/vhosts' do
-  owner deploy[:user]
-  group deploy[:group]
-  mode '0755'
-  action :create
+    owner "www-data"
+    group "www-data"
+    mode '0755'
+    action :create
 end
