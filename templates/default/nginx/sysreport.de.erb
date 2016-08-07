@@ -1,9 +1,9 @@
 server {
 	listen 80;
 	listen [::]:80;
-	root /var/www/vhosts/<%= @node[:nginx][:domain] %>;
+	root /var/www/vhosts/<%= @node[:custom][:nginx][:domain] %>;
 	index index.html index.htm index.nginx-debian.html;
-	server_name <%= @node[:nginx][:domain] %> www.<%= @node[:nginx][:domain] %>;
+	server_name <%= @node[:custom][:nginx][:domain] %> www.<%= @node[:custom][:nginx][:domain] %>;
 	location / {
 		try_files $uri $uri/ =404;
 	}
