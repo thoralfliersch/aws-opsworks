@@ -20,3 +20,12 @@ template 'nginx.conf' do
     mode     '0644'
     notifies :reload, 'service[nginx]', :delayed
 end
+
+template 'sysreport.de' do
+    path     "/etc/nginx/sites-available/sysreport.de"
+    source   "nginx/sysreport.de.erb"
+    owner    'root'
+    group    'root'
+    mode     '0644'
+    notifies :reload, 'service[nginx]', :delayed
+end
