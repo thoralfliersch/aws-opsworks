@@ -4,5 +4,5 @@
 #
 
 package "nginx" do
-    action :update
+    action :upgrade
 end
