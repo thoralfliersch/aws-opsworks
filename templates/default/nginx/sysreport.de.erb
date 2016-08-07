@@ -1,9 +1,9 @@
 server {
 	listen 80;
 	listen [::]:80;
-	root /var/www/vhosts/sysreport.de;
+	root /var/www/vhosts/<%= @node[:nginx][:domain] %>;
 	index index.html index.htm index.nginx-debian.html;
-	server_name sysreport.de www.sysreport.de;
+	server_name <%= @node[:nginx][:domain] %>;
 	location / {
 		try_files $uri $uri/ =404;
 	}
